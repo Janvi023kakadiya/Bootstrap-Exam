@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Exam</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 32px;
+    }
+    .offcanvas-header {
+      background-color: #343a40;
+      color: white;
+    }
+    .offcanvas-body a {
+      text-decoration: none;
+      padding: 10px 0;
+    }
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+    .image-content {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .content-box {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .content-box h5 {
+      margin-top: 15px;
+    }
+    .registration-form {
+            background: #f1e8e8;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+  </style>
+</head>
+<body>
+<!-- header-->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Carousel Banner -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/img/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Welcome to JK World</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/nature.jpg" class="d-block w-100" alt="Slide 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Our Services</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/image.jpg" class="d-block w-100" alt="Slide 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Contact Us</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- GRID Column -->
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 offset-md-2 content-box">
+        <img src="assets/img/download.jpeg" alt="nature" class="image-content">
+        <h5>High Nature</h5>
+       
+      </div>
+  
+      <div class="col-md-4 content-box">
+        <img src="assets/img/download (1).jpeg" alt="mountains" class="image-content">
+        <h5>Beautiful Mountains</h5>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6 offset-md-3 content-box">
+        <img src="assets/img/bright.jpg" alt="bright" class="image-content">
+        <h5>Bright Nature</h5>
+      </div>
+    </div>
+  </div>
+
+  <!--  User form -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="registration-form">
+                <h2 class="form-title">User Registration</h2>
+                <form class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid username.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid email.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                        <div class="invalid-feedback">
+                            Password must be at least 6 characters.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
+                        <div class="invalid-feedback">
+                            Passwords do not match.
+                        </div>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                        <label class="form-check-label" for="termsCheck">Agree to terms and conditions</label>
+                        <div class="invalid-feedback">
+                        
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
